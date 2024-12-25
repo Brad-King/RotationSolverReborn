@@ -284,7 +284,10 @@ partial class BlueMageRotation
 
     static partial void ModifySeaShantyPvE(ref ActionSetting setting)
     {
-
+        setting.CreateConfig = () => new ActionConfig()
+        {
+            AoeCount = 1,
+        };
     }
 
     static partial void ModifyMightyGuardPvE(ref ActionSetting setting)
