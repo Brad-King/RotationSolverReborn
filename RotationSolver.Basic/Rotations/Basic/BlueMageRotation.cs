@@ -145,6 +145,11 @@ partial class BlueMageRotation
 
     }
 
+    static partial void ModifySharpenedKnifePvE(ref ActionSetting setting)
+    {
+
+    }
+
     static partial void ModifyWhistlePvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.Harmonized];
@@ -325,7 +330,16 @@ partial class BlueMageRotation
     {
         setting.CreateConfig = () => new ActionConfig()
         {
-            AoeCount = 3,
+            AoeCount = 2,
+        };
+        setting.IsFriendly = false;
+    }
+
+    static partial void ModifyElectrogenesisPvE(ref ActionSetting setting)
+    {
+        setting.CreateConfig = () => new ActionConfig()
+        {
+            AoeCount = 2,
         };
         setting.IsFriendly = false;
     }
